@@ -1,0 +1,56 @@
+\subsection*{Algoritmo da Divisão}
+Se $a, b \in \mathbb{Z}$, com $b \neq 0$, então existem (e são únicos) $q, r \in  \mathbb{Z}$ com $0 \leq r < |b|$, tais que, $a = qb + r$.
+\subsubsection*{Demonstração}
+\begin{description}
+    \item[(i)] Existência \newline
+    \begin{description}
+        \item[(Caso $b > 0$)]
+        Consideremos o conjunto dos números múltiplos de $b$ ordenados de acordo com a ordem natural da reta, isto é, o conjunto
+
+        $[\dots, -3b, -2b, -b, 0, b, 2b, 3b, \dots]$
+
+        com,
+
+        $\dots, -3b < -2b < -b < 0 < b < 2b < 3b, \dots$.
+
+        Note que disso decorre uma decomposição da reta em intervalos disjuntos da forma
+
+        $[qb, (q + 1)b] = {x \in \mathbb{R} : qb \leq x < (q + 1)b}$.
+
+        com $q \in \mathbb{Z}$.
+
+        Assim, dado $a \in \mathbb{Z}$, este pertence a apenas um desses intervalos e portanto necessariamente é da forma $a = qb + r$, com $q \in \mathbb{Z}$ e $r \geq 0$. É claro que $r < (q + 1)b - qb = b$.
+
+        \item[(Caso $b < 0$)]
+        Aplicamos o teorema no caso demonstrado em (i) para determinar $q_1, r \in \mathbb{Z}$, com $0 \leq r < |b|$ para escrever: $a = q_1|b| + r$. Fazendo $q = q_1$, como $|b| = -b$, (pois $b < 0$), obtemos de $a = q_1|b| + r$ que $a = qb + r$, onde $q, r \in \mathbb{Z}$ e $0 \leq r < |b|$.
+    \end{description}
+    \item[(ii)] Unicidade
+
+    Resta demonstrar que $q$ e $r$, os quais satisfazem $a = qb + r$ são únicos.
+
+    De fato, suponha que $a = qb + r$ e $a = q_1 b + r_1$, com $0 \leq r < |b|$ e $0 \leq r_1 < |b|$.
+
+    Assim, $qb +  r = q_1 + r_1 \Rightarrow r-r_1 = (q_1 - q)b$.
+
+    Afirmamos que $r = r_1$.
+
+    Com efeito, se $r \neq r_1$, então: $0 < |r_1 - r|$.
+
+    Além disso, $|r_1 - r| < b$. Pois, podemos admitir, sem perda de generalidade que $r < r_1$, consequentemente $r_1 - r > 0$ e $|r_1 - r| = r_1 - r$.
+
+    Assim, se $r_1 - r = |b|$, então $r_1 = |b| + r$ e portanto $r_1 > |b|$, que é absurdo.
+
+    Também, se $r_1 - r > |b|$, então $r_1 > |b| + r > |b|$, gerando novamente o absurdo $r_1 > b$.
+
+    Logo, pela lei da tricotomia, $|r_1 - r| = r_1 - r < |b|$.
+
+    Portanto, do acima segue que $0 < |r_1 - r| < |b|$.
+
+    Agora, de $r-r_1 = (q_1 - q)b$ obtemos, $|r_1 - r| = |q_1 - q|b$.
+
+    O que segue que $0 <  |q_1 - q|b < |b|$.
+
+    Logo, $0 < |q_1 - q| < 1$, o que é um absurdo, pois $|q_1 - q|$ é um número inteiro (pois $q$ e $q_1 \in \mathbb{Z}$ e em $\mathbb{Z}$ vale a lei do Fechamento da Adição). Portanto $r = r_1$.
+
+    Note que essa igualdade combinada com $|r_1 - r| = |q_1 - q|b$ implica $q_1 = q$, já que $0 = (q_1 - q)b$ e $b \neq 0$ por hipótese.
+\end{description}
