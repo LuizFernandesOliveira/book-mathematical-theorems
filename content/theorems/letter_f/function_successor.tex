@@ -1,0 +1,21 @@
+\subsection*{Função Sucessor}
+Se $s : \mathbb{N} \longrightarrow \mathbb{N}$ é a função sucessor, então, tem-se:
+\begin{description}
+    \item[(i)] $s(n) \neq n$, para todo $n \in \mathbb{N}$, ou seja, nenhum número natural é sucessor de sí mesmo;
+    \item[(ii)] $Im(s) = \mathbb{N}^*$ ou seja, o zero é o único natural que não é sucessor de nenhum
+    número natural.
+\end{description}
+
+\subsubsection*{Demonstração}
+\begin{description}
+    \item[(i)] $s(n) \neq n$ \newline
+    Seja $\mathbb{A}$ um subconjunto de $\mathbb{N}$ tal que $\mathbb{A} = \{n \in \mathbb{N} : s(n) \neq n\}$. \newline
+    Temos que $0 \in \mathbb{A}$, pois $s(0) \neq 0$, já que $0 \notin Im(s)$ pelo axioma de peano (Axioma 2). \newline
+    Pela definição do conjunto $\mathbb{A}$ temos que $k \in \mathbb{A} \Leftrightarrow s(k) \neq k \Rightarrow s(s(k)) \neq s(k)$, já que $s$ é injetora pelo axioma de peano (Axioma 1). \newline
+    Assim $s(k) \in \mathbb{A}$. Logo, como temos $0 \in \mathbb{A}$, $k \in \mathbb{A} \Rightarrow s(k) \in \mathbb{A}$, e, pelo axioma de peano (Axioma 3), concluimos que $\mathbb{A} = \mathbb{N}$.
+
+    \item[(ii)] $Im(s) = \mathbb{N}^*$ \newline
+    Tomemos o conjunto $\mathbb{A} = \mathbb{N} \cap Im(s)$. Note que $\mathbb{A} \subset \mathbb{N}$. \newline
+    Temos que $0 \in \mathbb{A}$ e se $k \in \mathbb{A}$, então $s(k) \in Im(s)$, assim $s(k) \in \mathbb{A}$.
+    Pelo axioma de peano (Axioma 3), temos que $\mathbb{A} = \mathbb{N}$, e como $0 \notin Im(s)$, pelo axioma de peano (Axioma 2), então $Im(s) = \mathbb{N}^*$.
+\end{description}
