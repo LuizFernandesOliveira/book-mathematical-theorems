@@ -1,1 +1,1 @@
-Definições Matemáticas
+Teoremas Matemáticos
