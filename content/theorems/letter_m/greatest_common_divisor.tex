@@ -1,0 +1,30 @@
+\subsection*{Máximo Divisor Comum}
+Dados $a, b \in \mathbb{Z}$ (pelo menos um deles não nulos) existem $x_0, y_0 \in \mathbb{Z}$
+tais que $ax_0, by_0 = d$, onde $d = m.d.c.(a, b)$.
+
+\subsubsection*{Demonstração}
+Limitando-se ao caso em que $a > 0$ e $b > 0$.
+Seja $\mathbb{L} = {ax + by | x, y \in \mathbb{Z}}$.
+Evidentemente existem elementos estritamente positivos em $L$ (faça-se, por exemplo, $x = y = 1$).
+Seja $d$ o menor desses elementos.
+Mostremos que $d$ é o máximo divisor comum entre $a$ e $b$.
+\begin{description}
+    \item[(i)] $d$ é obviamente maior que zero; \newline
+    \item[(ii)] Como $d \in \mathbb{L}$, então existem $x_0, y_0 \in \mathbb{Z}$ de maneira que $d = ax_0 + by_0$.
+    Aplicando o algorítmo da divisão aos elementos $a$ e $d$:
+
+$a = dq + r (0 \leq r \l d)$.
+
+Das duas últimas igualdades segue que
+
+$a = (ax_0 + by_0)q + r$
+
+ou, ainda
+
+$r = a(1 - qx_0) + b(-y_0)q$
+
+o que vem mostrar que $r \in \mathbb{L}$. Sendo $r$ positivo e levando em conta a escolha do
+elemento $d$ a conclusão é que $r = 0$. Daí ficamos com $a = dq$ o que mostra que $d|a$.
+Analogamente se prova que $d|b$;
+    \item [(iii)] Se $d'|a$ e $d'|b$, como $d = ax_0 + by_0$, então é claro que $d'|d$, e portanto $d = m.d.c(a, b)$.
+\end{description}
